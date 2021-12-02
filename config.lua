@@ -3,8 +3,9 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
 lvim.transparent_window = true
-vim.opt.relativenumber = true
--- require("lspconfig").graphql.setup({})
+
+require("user.plugins")
+require("user.settings")
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -61,4 +62,6 @@ linters.setup({
 -- }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- require("user.autocommands").setup()
+-- lvim.autocommands.custom_groups = {
+--   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
+-- }
