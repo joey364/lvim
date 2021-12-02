@@ -6,9 +6,16 @@ lvim.plugins = {
 	{ "lunarvim/colorschemes" },
 
 	--lsp enhancement
-	{ "hrsh7th/nvim-compe" },
 	{
 		"tzachar/compe-tabnine",
+		config = function()
+			local tabnine = require("cmp_tabnine.config")
+			tabnine:setup({
+				max_lines = 1000,
+				max_num_results = 20,
+				sort = true,
+			})
+		end,
 		run = "./install.sh",
 		requires = "hrsh7th/nvim-compe",
 		event = "InsertEnter",
@@ -88,6 +95,24 @@ lvim.plugins = {
 				css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
 				css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
 			})
+		end,
+	},
+	-- {
+	-- 	"Pocco81/AutoSave.nvim",
+	-- 	config = function()
+	-- 		require("autosave").setup()
+	-- 	end,
+	-- },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		event = "BufRead",
+		setup = function()
+			vim.g.indentLine_enabled = 1
+			vim.g.indent_blankline_char = "▏"
+			vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
+			vim.g.indent_blankline_buftype_exclude = { "terminal" }
+			vim.g.indent_blankline_show_trailing_blankline_indent = false
+			vim.g.indent_blankline_show_first_indent_level = false
 		end,
 	},
 }
