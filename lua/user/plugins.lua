@@ -7,7 +7,7 @@ lvim.plugins = {
 
 	--lsp enhancement
 	{
-		"tzachar/compe-tabnine",
+		"tzachar/cmp-tabnine",
 		config = function()
 			local tabnine = require("cmp_tabnine.config")
 			tabnine:setup({
@@ -17,8 +17,7 @@ lvim.plugins = {
 			})
 		end,
 		run = "./install.sh",
-		requires = "hrsh7th/nvim-compe",
-		event = "InsertEnter",
+		requires = "hrsh7th/nvim-cmp",
 	},
 	{
 		"aca/emmet-ls",
