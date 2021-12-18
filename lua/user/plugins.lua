@@ -19,6 +19,7 @@ lvim.plugins = {
 		run = "./install.sh",
 		requires = "hrsh7th/nvim-cmp",
 	},
+	{ "mfussenegger/nvim-jdtls" },
 	{
 		"aca/emmet-ls",
 		config = function()
