@@ -1,7 +1,7 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "tomorrow"
 lvim.transparent_window = true
 
 require("user.plugins")
@@ -25,14 +25,17 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- generic LSP settings
-
-require("lvim.lsp.manager").setup("graphql", {})
+-- require("lvim.lsp.manager").setup("graphql", {})
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
 	{ exe = "stylua" },
 	{ exe = "rustfmt" },
+	{ exe = "prettier", filetypes = {
+		"html",
+		"css",
+	} },
 })
 
 -- -- set additional linters
