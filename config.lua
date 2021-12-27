@@ -32,6 +32,7 @@ local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
 	{ exe = "stylua" },
 	{ exe = "rustfmt" },
+	{ exe = "shfmt" },
 	{ exe = "prettier", filetypes = {
 		"html",
 		"css",
