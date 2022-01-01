@@ -24,6 +24,16 @@ lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
+lvim.builtin.treesitter.rainbow = {
+	enable = true,
+	colors = {
+		"Gold",
+		"Orchid",
+		"LightSkyBlue",
+	},
+	disable = { "html" },
+}
+
 -- generic LSP settings
 -- require("lvim.lsp.manager").setup("graphql", {})
 
