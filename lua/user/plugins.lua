@@ -123,4 +123,10 @@ lvim.plugins = {
 			vim.g.indent_blankline_show_first_indent_level = false
 		end,
 	},
+	{
+		"folke/todo-comments.nvim",
+		config = function()
+			require("user.todo_comments").config()
+		end,
+	},
 }
