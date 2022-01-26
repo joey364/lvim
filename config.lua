@@ -56,6 +56,16 @@ formatters.setup({
 		"css",
 	} },
 })
+-- local formatters = require("lvim.lsp.null-ls.formatters")
+-- formatters.setup({
+-- 	{ exe = "stylua" },
+-- 	{ exe = "rustfmt" },
+-- 	{ exe = "shfmt" },
+-- 	{ exe = "prettier", filetypes = {
+-- 		"html",
+-- 		"css",
+-- 	} },
+-- })
 
 -- -- set additional linters
 local linters = require("lvim.lsp.null-ls.linters")
@@ -73,3 +83,19 @@ linters.setup({
 		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 	},
 })
+-- -- -- set additional linters
+-- local linters = require("lvim.lsp.null-ls.linters")
+-- linters.setup({
+-- 	{
+-- 		exe = "shellcheck",
+-- 		args = { "--severity", "warning" },
+-- 	},
+-- 	{
+-- 		exe = "codespell",
+-- 		filetypes = { "javascript", "python" },
+-- 	},
+-- 	{
+-- 		exe = "eslint",
+-- 		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+-- 	},
+-- })
