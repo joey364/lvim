@@ -2,10 +2,13 @@
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "tomorrow"
+lvim.colorscheme = "system76"
 lvim.transparent_window = true
 
 require("user.plugins")
 require("user.settings")
+require "user.plugins"
+require "user.settings"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -30,6 +33,8 @@ lvim.builtin.notify.active = true
 lvim.builtin.notify.opts = {
 	timeout = 5000,
 	background_colour = "#000000",
+  timeout = 5000,
+  background_colour = "#000000",
 }
 
 lvim.builtin.treesitter.rainbow = {
@@ -40,6 +45,13 @@ lvim.builtin.treesitter.rainbow = {
 		"LightSkyBlue",
 	},
 	disable = { "html" },
+  enable = true,
+  colors = {
+    "Gold",
+    "Orchid",
+    "LightSkyBlue",
+  },
+  disable = { "html", "javascriptreact", "typescriptreact" },
 }
 
 -- generic LSP settings
