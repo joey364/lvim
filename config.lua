@@ -1,12 +1,9 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "tomorrow"
 lvim.colorscheme = "system76"
 lvim.transparent_window = true
 
-require("user.plugins")
-require("user.settings")
 require "user.plugins"
 require "user.settings"
 
@@ -31,20 +28,11 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- notify plugin
 lvim.builtin.notify.active = true
 lvim.builtin.notify.opts = {
-	timeout = 5000,
-	background_colour = "#000000",
   timeout = 5000,
   background_colour = "#000000",
 }
 
 lvim.builtin.treesitter.rainbow = {
-	enable = true,
-	colors = {
-		"Gold",
-		"Orchid",
-		"LightSkyBlue",
-	},
-	disable = { "html" },
   enable = true,
   colors = {
     "Gold",
@@ -57,57 +45,3 @@ lvim.builtin.treesitter.rainbow = {
 -- generic LSP settings
 -- require("lvim.lsp.manager").setup("graphql", {})
 
--- -- set a formatter, this will override the language server formatting capabilities (if it exists)
-local formatters = require("lvim.lsp.null-ls.formatters")
-formatters.setup({
-	{ exe = "stylua" },
-	{ exe = "rustfmt" },
-	{ exe = "shfmt" },
-	{ exe = "prettier", filetypes = {
-		"html",
-		"css",
-	} },
-})
--- local formatters = require("lvim.lsp.null-ls.formatters")
--- formatters.setup({
--- 	{ exe = "stylua" },
--- 	{ exe = "rustfmt" },
--- 	{ exe = "shfmt" },
--- 	{ exe = "prettier", filetypes = {
--- 		"html",
--- 		"css",
--- 	} },
--- })
-
--- -- set additional linters
-local linters = require("lvim.lsp.null-ls.linters")
-linters.setup({
-	{
-		exe = "shellcheck",
-		args = { "--severity", "warning" },
-	},
-	{
-		exe = "codespell",
-		filetypes = { "javascript", "python" },
-	},
-	{
-		exe = "eslint",
-		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-	},
-})
--- -- -- set additional linters
--- local linters = require("lvim.lsp.null-ls.linters")
--- linters.setup({
--- 	{
--- 		exe = "shellcheck",
--- 		args = { "--severity", "warning" },
--- 	},
--- 	{
--- 		exe = "codespell",
--- 		filetypes = { "javascript", "python" },
--- 	},
--- 	{
--- 		exe = "eslint",
--- 		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
--- 	},
--- })
