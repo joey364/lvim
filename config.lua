@@ -28,7 +28,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- notify plugin
 lvim.builtin.notify.active = true
 lvim.builtin.notify.opts = {
-  timeout = 5000,
+  timeout = 500,
   background_colour = "#000000",
 }
 
@@ -44,4 +44,3 @@ lvim.builtin.treesitter.rainbow = {
 
 -- generic LSP settings
 -- require("lvim.lsp.manager").setup("graphql", {})
-
