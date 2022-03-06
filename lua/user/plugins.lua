@@ -57,6 +57,16 @@ lvim.plugins = {
       lspconfig.emmet_ls.setup { capabilities = capabilities }
     end,
   },
+  {
+    "hrsh7th/cmp-emoji",
+    config = function()
+      require("cmp").setup {
+        sources = {
+          { name = "emoji" },
+        },
+      }
+    end,
+  },
 
   --treesitter
   {
