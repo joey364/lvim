@@ -6,6 +6,7 @@ lvim.transparent_window = true
 
 require "user.plugins"
 require "user.settings"
+require "user.copilot"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
