@@ -67,7 +67,7 @@ lvim.plugins = {
       }
     end,
   },
-  { "github/copilot" },
+  { "github/copilot.vim" },
 
   --treesitter
   {
