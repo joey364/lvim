@@ -1,12 +1,13 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "system76"
+lvim.colorscheme = "darkplus"
 lvim.transparent_window = true
 
 require "user.plugins"
 require "user.settings"
 require "user.copilot"
+-- require "user.github_theme"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
