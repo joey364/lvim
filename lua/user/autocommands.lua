@@ -1,12 +1,12 @@
 local M = {}
 
 M.setup = function()
-	lvim.autocommands.custom_groups = {
-		-- { "CursorHold", "*", "lua vim.lsp.diagnostic.show_line_diagnostics()" },
-		-- { "Filetype", "python", "lua require('cmp').setup.buffer({completion = {autocomplete = false}})" },
-		{ "Filetype", "graphql", "lua require('lspconfig').graphql.setup()" },
-		-- { "BufWritePre", "*", "lua require('user.tidy').tidy_up()" },
-	}
+  lvim.autocommands.custom_groups = {
+    -- { "CursorHold", "*", "lua vim.lsp.diagnostic.show_line_diagnostics()" },
+    -- { "Filetype", "python", "lua require('cmp').setup.buffer({completion = {autocomplete = false}})" },
+    -- { "Filetype", "graphql", "lua require('lspconfig').graphql.setup()" },
+    -- { "BufWritePre", "*", "lua require('user.tidy').tidy_up()" },
+  }
 end
 
 -- M.disable_python_autocomplete = function()
