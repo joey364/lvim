@@ -30,7 +30,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- notify plugin
 lvim.builtin.notify.active = true
 lvim.builtin.notify.opts = {
-  timeout = 500,
+  timeout = 700,
   background_colour = "#000000",
 }
 
