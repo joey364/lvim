@@ -8,6 +8,7 @@ require "user.plugins"
 require "user.settings"
 require "user.copilot"
 -- require "user.github_theme"
+require "user.keymaps"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
