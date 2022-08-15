@@ -4,7 +4,12 @@ lvim.plugins = {
   -- { "folke/tokyonight.nvim" },
   -- { "glepnir/zephyr-nvim" },
   { "lunarvim/colorschemes" },
-  { "projekt0n/github-nvim-theme" },
+  {
+    "projekt0n/github-nvim-theme",
+    config = function()
+      require "user.github_theme"
+    end,
+  },
 
   --lsp enhancement
   {
