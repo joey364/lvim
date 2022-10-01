@@ -44,8 +44,9 @@ lvim.builtin.treesitter.rainbow = {
     "Gold",
     "Orchid",
     "LightSkyBlue",
+    -- "LightSalmon",
   },
-  disable = { "html", "javascriptreact", "typescriptreact" },
+  disable = { "html", "javascript", "javascriptreact", "typescript", "typescriptreact" },
 }
 
 -- generic LSP settings
