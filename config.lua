@@ -19,7 +19,8 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.builtin.alpha.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+-- lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.nvimtree.setup.git.ignore = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
@@ -28,11 +29,13 @@ lvim.builtin.treesitter.ensure_installed = "all"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
--- notify plugin
-lvim.builtin.notify.active = true
-lvim.builtin.notify.opts = {
-  timeout = 700,
-  background_colour = "#000000",
+--notify plugin
+lvim.builtin.notify = {
+  active = true,
+  opts = {
+    timeout = 700,
+    background_colour = "#1E222A",
+  },
 }
 
 lvim.builtin.treesitter.rainbow = {
