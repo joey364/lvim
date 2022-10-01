@@ -1,7 +1,7 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "darkplus"
+lvim.colorscheme = "github_dark_default"
 lvim.transparent_window = true
 
 require "user.plugins"
