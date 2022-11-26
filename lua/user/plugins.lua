@@ -153,11 +153,20 @@ lvim.plugins = {
           cpp = "g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
           java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
           python = "python3 -u",
+          go = "go run .",
+          javascript = "bun $fileName",
           typescript = "deno run",
           rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
         },
       }
     end,
+    requires = "nvim-lua/plenary.nvim",
+  },
   -- { "nvim-telescope/telescope-media-files.nvim" },
+  {
+    "rcarriga/nvim-notify",
+    config = function()
+      require "user.notify"
+    end,
   },
 }
