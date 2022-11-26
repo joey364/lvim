@@ -10,21 +10,24 @@ lvim.plugins = {
       require "user.github_theme"
     end,
   },
+  -- { "yamatsum/nvim-nonicons", requires = { "kyazdani42/nvim-web-devicons" } },
 
   --lsp enhancement
-  {
-    "tzachar/cmp-tabnine",
-    config = function()
-      local tabnine = require "cmp_tabnine.config"
-      tabnine:setup {
-        max_lines = 1000,
-        max_num_results = 20,
-        sort = true,
-      }
-    end,
-    run = "./install.sh",
-    requires = "hrsh7th/nvim-cmp",
-  },
+  --java
+  { "mfussenegger/nvim-jdtls" },
+  -- {
+  --   "tzachar/cmp-tabnine",
+  --   config = function()
+  --     local tabnine = require "cmp_tabnine.config"
+  --     tabnine:setup {
+  --       max_lines = 1000,
+  --       max_num_results = 20,
+  --       sort = true,
+  --     }
+  --   end,
+  --   run = "./install.sh",
+  --   requires = "hrsh7th/nvim-cmp",
+  -- },
   {
     "aca/emmet-ls",
     config = function()
@@ -95,6 +98,7 @@ lvim.plugins = {
     end,
   },
 
+  -- debugging and testing
   -- general
   {
     "ray-x/lsp_signature.nvim",
@@ -121,11 +125,11 @@ lvim.plugins = {
       })
     end,
   },
-  {
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    ft = "markdown",
-  },
+  -- {
+  --   "iamcco/markdown-preview.nvim",
+  --   run = "cd app && npm install",
+  --   ft = "markdown",
+  -- },
 
   -- {
   -- 	"Pocco81/AutoSave.nvim",
@@ -133,18 +137,6 @@ lvim.plugins = {
   -- 		require("autosave").setup()
   -- 	end,
   -- },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    event = "BufRead",
-    setup = function()
-      vim.g.indentLine_enabled = 1
-      vim.g.indent_blankline_char = "▏"
-      vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
-      vim.g.indent_blankline_buftype_exclude = { "terminal" }
-      vim.g.indent_blankline_show_trailing_blankline_indent = false
-      vim.g.indent_blankline_show_first_indent_level = false
-    end,
-  },
   {
     "folke/todo-comments.nvim",
     config = function()
@@ -166,6 +158,6 @@ lvim.plugins = {
         },
       }
     end,
+  -- { "nvim-telescope/telescope-media-files.nvim" },
   },
-  requires = "nvim-lua/plenary.nvim",
 }
