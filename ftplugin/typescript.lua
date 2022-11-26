@@ -3,7 +3,7 @@ formatters.setup {
   {
     exe = "prettier",
     filetypes = { "typescript" },
-    args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+    args = { "--no-semi", "--single-quote", "--jsx-single-quote", "--quote-props=consistent" },
   },
 }
 
@@ -15,6 +15,6 @@ linters.setup {
   },
   {
     exe = "codespell",
-    filetypes = "typescript",
+    filetypes = { "typescript" },
   },
 }

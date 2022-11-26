@@ -3,7 +3,7 @@ formatters.setup {
   {
     exe = "prettier",
     filetypes = { "javascriptreact" },
-    args = { "--no-semi", "--single-quote", "--jsx-bracket-same-line", "--jsx-single-quote" },
+    args = { "--no-semi", "--single-quote", "--jsx-single-quote", "--quote-props=consistent" },
   },
 }
 
