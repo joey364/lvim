@@ -1,3 +1,12 @@
+-- remaps
+lvim.keys.insert_mode["jk"] = "<esc>"
+-- lvim.keys
+lvim.keys.normal_mode["<S-h>"] = ":bprev<CR>"
+lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
+
+--toggleterm
+lvim.builtin.terminal.open_mapping = "<C-t>"
+
 -- which key
 lvim.builtin.which_key.mappings["r"] = {
   name = "+Run Code",
