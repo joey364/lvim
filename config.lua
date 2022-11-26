@@ -29,14 +29,16 @@ lvim.builtin.treesitter.ensure_installed = "all"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
+lvim.builtin.illuminate.active = false
+
 --notify plugin
-lvim.builtin.notify = {
-  active = true,
-  opts = {
-    timeout = 700,
-    background_colour = "#1E222A",
-  },
-}
+-- lvim.builtin.notify = {
+--   active = true,
+--   opts = {
+--     timeout = 700,
+--     background_colour = "#1E222A",
+--   },
+-- }
 
 lvim.builtin.treesitter.rainbow = {
   enable = true,
@@ -44,9 +46,9 @@ lvim.builtin.treesitter.rainbow = {
     "Gold",
     "Orchid",
     "LightSkyBlue",
-    -- "LightSalmon",
+    "LightSalmon",
   },
-  disable = { "html", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  disable = { "html", "javascript", "javascriptreact", "typescript", "typescriptreact", "php" },
 }
 
 -- generic LSP settings
